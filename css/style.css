@@ -1,0 +1,108 @@
+/*Phone viewport*/
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+body {
+  margin: 0;
+}
+header {
+  grid-column: 1/2;
+  background-color: #32cd32;
+  padding: 0.5em;
+}
+main {
+  padding: 1.2em;
+  grid-column: 1/3
+}
+aside {
+  background: #98fb98;
+  padding: 0.5em;
+}
+footer {
+  background: #32cd32;
+  padding: 0.5em;
+}
+.foto {
+  width: 12em;
+}
+
+
+/*Tablet viewport*/
+@media screen and (min-width: 38em) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  header {
+    background-color: #32cd32;
+    grid-column: 1/2;
+    padding: 0.5em;
+  }
+  main {
+    grid-column: 1/3;  /* main staat over de hele breedte van het grid van de wrapper */
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1.2em;
+      padding: 0.5em;
+  }
+  aside {
+    grid-column: 1/2;
+    background: #98fb98;
+    padding: 0.5em;
+  }
+  footer {
+    padding: 0.5em;
+    background: #32cd32;
+  }
+  .foto {
+    width: 12em;
+  }
+}
+/* Desktop viewport */
+@media screen and (min-width: 60em) {
+  .wrapper {
+    /* display: grid; */
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  header {
+
+    grid-column: 1/3;
+    padding: 0.5em;
+    background-color: #32cd32;
+  }
+  main {
+    grid-column: 1/4;  /* main staat over de hele breedte van het grid van de wrapper */
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1.2em;
+      padding: 0.5em;
+  }
+  aside {
+    grid-column: 1/2;
+    background: #98fb98;
+    padding: 0.5em;
+  }
+  section.hoog{
+    grid-row: span 2;
+  }
+  section.breed{
+    grid-column: span 2;
+  }
+  footer {
+    padding: 0.5em;
+    background: #32cd32;
+    grid-column: 2/3;
+    grid-column: span 2;
+  }
+  .foto {
+    width: 12em;
+  }
+}
+
+#validatie img {
+  height: 1em;
+  width: auto;
+  border: 0;
+  margin: 0 .3em;
+}
